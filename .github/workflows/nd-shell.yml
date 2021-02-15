@@ -7,15 +7,15 @@ on:
   workflow_dispatch:
 
 env:
-  GitHubMail: "rokibhasansagar2014@outlook.com"
-  GitHubName: "rokibhasansagar"
+  GitHubMail: "adameyyad999@gmail.com"
+  GitHubName: "nnippon"
   # GH_TOKEN >> Github Personal Access Token << In Repository Secrets
   # authToken >> Telegram Bot Token << In Repository Secrets
   # ownerID >> Telegram User/Admin owner ID << In Repository Secrets
 
 jobs:
   shellbot:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
 
     steps:
       - name: Checkout
