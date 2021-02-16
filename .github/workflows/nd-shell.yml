@@ -43,8 +43,8 @@ jobs:
       - name: utils
         run: |
           sudo apt install megatools
-          cd /home/runner && curl -sL https://git.io/file-transfer | sh
-          export PATH="/home/runner:$PATH"
+          cd /usr/local/bin && sudo curl -sL https://git.io/file-transfer | sh
+
       - name: Install ErfanGSIs Requirements
         run: |
           git clone --recurse-submodules http://github.com/nnippon/ErfanGSIs /home/runner/ErfanGSIs
