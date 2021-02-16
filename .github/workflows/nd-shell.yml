@@ -9,7 +9,6 @@ on:
 env:
   GitHubMail: "adameyyad999@gmail.com"
   GitHubName: "nnippon"
-  PATH: "/home/runner:$PATH"
   # GH_TOKEN >> Github Personal Access Token << In Repository Secrets
   # authToken >> Telegram Bot Token << In Repository Secrets
   # ownerID >> Telegram User/Admin owner ID << In Repository Secrets
@@ -74,6 +73,7 @@ jobs:
         continue-on-error: true
         run: |
           cd shell-bot
+          export PATH="/home/runner:$PATH"
           node server
 
       - name: Workflow Looping
