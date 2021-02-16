@@ -43,7 +43,7 @@ jobs:
       - name: utils
         run: |
           sudo apt install megatools
-          sudo cd /usr/bin && curl -sL https://git.io/file-transfer | sh
+          cd /usr/bin && sudo curl -sL https://git.io/file-transfer | sh
 
       - name: Install ErfanGSIs Requirements
         run: |
