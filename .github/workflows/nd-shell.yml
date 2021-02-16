@@ -29,9 +29,6 @@ jobs:
           git config --global credential.helper store
           echo "https://${GitHubName}:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
 
-      - name: Cleanup Workspace
-        uses: rokibhasansagar/slimhub_actions@main
-
       - name: Re-install nodejs and npm
         run: |
           curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
@@ -40,7 +37,7 @@ jobs:
       - name: tmate configs
         run: |
           sudo apt update
-          cat /dev/zero | sudo ssh-keygen -q -N ""
+          sudo ssh-keygen -t rsa -f /root/.ssh/id_rsa -q -P ""
           sudo apt install tmate
 
       - name: Install ErfanGSIs Requirements
